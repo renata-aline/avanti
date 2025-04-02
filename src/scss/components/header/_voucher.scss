@@ -1,0 +1,21 @@
+@import "../../base/vars";
+
+
+.banner-voucher {
+    width: 100%;
+    background-color: $primary-color;
+    text-align: center;
+
+    &__text {
+        font-size: 14px;
+        line-height: 22px;
+        color: $bg-default-color;
+        font-weight: 600;
+        &_value {
+            font-weight: 800;
+            font-size: 16px;
+            width: 63px;
+            background-color: #6220c1;
+        }
+    }
+}

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "sass --watch scss:css",
-    "start": "sass --watch scss:css"
+    "start": "sass --watch scss:css",
+    "dev": "sass --watch --load-path=src/scss src/scss/main.scss:src/css/main.css"
   },
   "keywords": [],
   "author": "",

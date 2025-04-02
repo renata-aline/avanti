@@ -1,7 +1,29 @@
-body{
-   background-color: rgb(202, 193, 182);
+@import 'base/reset';
+@import 'base/vars';
 
-   h1{
-      color: rgb(34, 13, 219);
-   }
+@import 'components/header/_voucher';
+
+
+html{
+    scroll-behavior: smooth;
 }
+
+body{
+    font-family: 'Nunito', sans-serif;
+   
+}
+
+.container {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    
+  }
+
+  .content {
+    max-width: 1260px;
+    width:100% ;
+    box-sizing: border-box;
+    padding: 0px 18px;
+    margin: 0 auto;
+  }
