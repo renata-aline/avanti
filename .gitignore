@@ -1,0 +1,26 @@
+# Ignorar arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar dependências do Node.js (se usar npm ou yarn)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Ignorar arquivos gerados pelo SASS
+src/css/
+
+# Ignorar arquivos de build (se houver)
+dist/
+
+# Ignorar cache do editor
+.vscode/
+.idea/
+*.log
+
+# Ignorar arquivos temporários
+*.tmp
+*.swp
+
+# Ignorar arquivos do Git relacionados a conflitos
+*.orig
