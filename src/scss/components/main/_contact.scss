@@ -1,0 +1,25 @@
+@import "../../base/vars";
+
+.contact {
+  margin-top: 80px;
+  overflow: hidden;
+  background-image: url("/src/assets/images/banner-section-contact.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__text {
+    width: 100%;
+    height: 50px;
+    color: $text-light-color;
+    background-color: $primary-color;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+  }
+}

@@ -7,6 +7,7 @@
 @import 'components/main/_card';
 @import 'components/main/_about';
 @import 'components/main/_about-product';
+@import 'components/main/_contact';
 
 html {
   scroll-behavior: smooth;
@@ -39,5 +40,10 @@ body {
 
   &--about {
     padding: 0;
+  }
+
+  &--contact {
+    padding: 0;
+    margin: auto;
   }
 }
