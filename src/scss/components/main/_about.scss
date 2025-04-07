@@ -1,0 +1,35 @@
+@import "../../base/vars";
+
+.about {
+  margin-top: 80px;
+  overflow: hidden;
+
+  &__image {
+    background-color: $bg-default-light-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_photo {
+      width: 100%;
+    }
+  }
+
+  &__description {
+   
+    &_title {
+      color: $text-default-color;
+      font-weight: 700;
+      font-size: 24px;
+      text-transform: uppercase;
+      margin-top: 20px;
+    }
+
+    &_text {
+      color: $text-default-color;
+      font-weight: 400;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+  }
+}

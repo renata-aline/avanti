@@ -5,9 +5,11 @@
 @import "components/header/_banner";
 @import 'components/main/_store';
 @import 'components/main/_card';
+@import 'components/main/_about';
 
 html {
   scroll-behavior: smooth;
+  
 }
 
 body {
@@ -32,5 +34,9 @@ body {
     width: 100%;
     min-height: 306px;
     box-sizing: border-box;
+  }
+
+  &--about {
+    padding: 0;
   }
 }
