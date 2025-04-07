@@ -3,6 +3,8 @@
 
 @import "components/header/_top-bar";
 @import "components/header/_banner";
+@import 'components/main/_store';
+@import 'components/main/_card';
 
 html {
   scroll-behavior: smooth;
