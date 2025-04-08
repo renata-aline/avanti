@@ -1,0 +1,22 @@
+@import "../../base/vars";
+
+.partner {
+  margin-top: 40px;
+  overflow: hidden;
+
+  &__text {
+    color: $text-secondary-color;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  &__logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+}
