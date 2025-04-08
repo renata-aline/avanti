@@ -9,6 +9,8 @@
 @import 'components/main/_about-product';
 @import 'components/main/_contact';
 @import 'components/main/_newsletter';
+@import 'components/footer/_site-map';
+@import 'components/footer/_accordion';
 
 html {
   scroll-behavior: smooth;
@@ -46,5 +48,11 @@ body {
   &--contact {
     padding: 0;
     margin: auto;
+  }
+
+  &--site-map {
+    padding: 0;
+    margin: auto;
+    background-color: $bg-light-grey-color;
   }
 }
