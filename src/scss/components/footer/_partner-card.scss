@@ -1,0 +1,15 @@
+@import "../../base/vars";
+
+.site-map__partner-cards {
+  padding: 30px;
+  overflow: hidden;
+
+  &_image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    list-style: none;
+  }
+}

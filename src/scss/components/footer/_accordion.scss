@@ -53,10 +53,10 @@
         &::after {
           content: "";
           display: block;
-          width: 10%;
+          width: 20%;
           bottom: -8px;
           height: 1px;
-          background-color: $primary-color;
+          background-color: $primary-dak-color;
 
           transition: transform 0.3s;
           transform: scale(0);
@@ -67,7 +67,7 @@
         }
 
         &:hover {
-          color: $primary-color;
+          color: $primary-dak-color;
         }
       }
     }
