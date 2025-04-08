@@ -3,20 +3,19 @@
 
 @import "components/header/_top-bar";
 @import "components/header/_banner";
-@import 'components/main/_store';
-@import 'components/main/_card';
-@import 'components/main/_about';
-@import 'components/main/_about-product';
-@import 'components/main/_contact';
-@import 'components/main/_newsletter';
-@import 'components/footer/_site-map';
-@import 'components/footer/_accordion';
-@import 'components/footer/_payment-method';
-@import 'components/footer/_partner';
+@import "components/main/_store";
+@import "components/main/_card";
+@import "components/main/_about";
+@import "components/main/_about-product";
+@import "components/main/_contact";
+@import "components/main/_newsletter";
+@import "components/footer/_site-map";
+@import "components/footer/_accordion";
+@import "components/footer/_payment-method";
+@import "components/footer/_partner";
 
 html {
   scroll-behavior: smooth;
-  
 }
 
 body {
@@ -57,5 +56,19 @@ body {
     padding: 0;
     margin: auto;
     background-color: $bg-light-grey-color;
+  }
+}
+
+#formMessage {
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: 700;
+
+  &.error {
+    color: $text-warning-color;
+  }
+
+  &.success {
+    color: $primary-color;
   }
 }

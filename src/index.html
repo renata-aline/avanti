@@ -291,21 +291,21 @@
               Cadastre-se na nossa
               <span class="newsletter__title--highlight">newsletter</span>
             </h3>
-            <form class="newsletter__form">
+            <form class="newsletter__form" id="newsletterForm">
               <input
                 type="text"
+                id="name"
                 placeholder=" Digite seu nome"
                 class="newsletter__form_input"
-                required
               />
               <input
                 type="email"
+                id="email"
                 placeholder=" Digite seu e-mail"
                 class="newsletter__form_input"
-                required
               />
               <label class="newsletter__form_checkbox">
-                <input type="checkbox" required />
+                <input type="checkbox" id="privacy" />
                 Estou de acordo com a
                 <a href="#" class="newsletter__form_checkbox--link"
                   >politica de privacidade</a
@@ -314,6 +314,7 @@
               <button type="submit" class="newsletter__form_button">
                 Cadastrar
               </button>
+              <p id="formMessage"></p>
             </form>
           </div>
         </section>
