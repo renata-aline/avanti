@@ -47,5 +47,12 @@
     justify-content: space-between;
     margin-top: 30px;
     gap: 10px;
+
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
