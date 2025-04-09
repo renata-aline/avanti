@@ -18,12 +18,34 @@
       font-weight: 700;
       font-size: 14px;
     }
+
+    &_pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+
+      &-button {
+        background-color: $bg-default-color;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        border: 1px solid $primary-color;
+        cursor: pointer;
+
+        &--icon {
+          color: $primary-color;
+          margin: auto;
+        }
+      }
+    }
   }
 
   &__products {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
-    gap:10px;
+    gap: 10px;
   }
 }
