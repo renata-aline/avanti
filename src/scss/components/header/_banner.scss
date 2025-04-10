@@ -21,7 +21,7 @@
 
 .banner-marketing {
   overflow: hidden;
-  background-color: $bg-default-light-color;
+  background-color: #c1c2c557;
   margin-top: 20px;
 
   display: flex;
@@ -32,16 +32,36 @@
   &__image {
     margin-left: -280px;
 
+    @media (min-width: 1024px) {
+      margin-left: -226px;
+    }
+
+    @media (min-width: 1440px) {
+      margin-left: -35px;
+    }
+
     &_photo {
       width: 100%;
       display: block;
       object-fit: contain;
+
+      @media (min-width: 1024px) {
+        width: auto;
+      }
     }
+
   }
 
   &__description {
     width: 100%;
     text-align: center;
+
+    @media (min-width: 1024px) {
+      // display: flex;
+      // justify-content: center;
+      // flex-wrap: wrap;
+      width: none;
+    }
    
     &_title {
       font-size: 40px;
@@ -49,12 +69,23 @@
       text-transform: uppercase;
       color: $text-default-color;
 
+      @media (min-width: 1024px) {
+        font-size: 100px;
+        display:flex;
+        justify-content: center;
+        text-align: center;
+      }
+
       &--light {
         display: block;
         font-size: 40px;
         font-weight: 300;
         text-transform: uppercase;
         color: $text-default-color;
+
+        @media (min-width: 1024px) {
+          font-size: 100px;
+        }
       }
     }
 
@@ -65,12 +96,26 @@
       color: $primary-color;
       margin: 8px 0;
 
+      @media (min-width: 768px) {
+        font-size: 25px;
+        display:flex;
+        flex-direction: column;
+        
+        
+      }
+
       &--bold {
+        margin-top: 10px;
         font-size: 32px;
         font-weight: 700;
         line-height: 100%;
         text-transform: uppercase;
         color: $primary-color;
+
+        @media (min-width: 1024px) {
+          font-size: 60px;
+         
+        }
       }
     }
   }

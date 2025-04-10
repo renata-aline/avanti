@@ -14,8 +14,6 @@
 @import "components/footer/_accordion";
 @import "components/footer/_payment-method";
 @import "components/footer/_partner";
-;
-
 html {
   scroll-behavior: smooth;
 }
@@ -25,7 +23,6 @@ body {
 }
 
 .container {
-  max-width: 1920px;
   width: 100%;
   margin: 0 auto;
   padding-bottom: 10px;

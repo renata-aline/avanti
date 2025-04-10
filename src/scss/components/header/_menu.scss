@@ -10,9 +10,23 @@
   padding: 16px;
   z-index: 10;
 
+  @media (min-width: 1024px) {
+    position: static;
+    background-color: transparent;
+    width: auto;
+    padding: 0;
+  }
+
   &_list {
     list-style: none;
     padding: 0;
+
+    @media (min-width: 1024px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
 
     &-item {
       margin-bottom: 16px;
@@ -30,5 +44,9 @@
   }
   &.hidden {
     display: none;
+
+    @media (min-width: 1024px) {
+      display: block;
+    }
   }
 }
