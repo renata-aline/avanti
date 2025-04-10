@@ -11,6 +11,10 @@
       color: $text-default-color;
       font-weight: 700;
       font-size: 16px;
+
+      @media (min-width: 1024px) {
+        font-size: 24px;
+      }
     }
 
     &_link {
@@ -26,15 +30,49 @@
       gap: 10px;
       margin-top: 20px;
 
+      @media (min-width: 1024px) {
+        width: 100%;
+        padding: 0 10px 0 10px;
+        justify-content: space-between;
+        position: relative;
+      }
+
       &-button {
         background-color: $bg-default-color;
-        width: 30px;
-        height: 30px;
-        border-radius: 100%;
-        border: 1px solid $primary-color;
+
         cursor: pointer;
 
-        &--icon {
+        &--left {
+          width: 30px;
+          height: 30px;
+          border-radius: 100%;
+          border: 1px solid $primary-color;
+
+          @media (min-width: 1024px) {
+            position: absolute;
+            top: -279px;
+            left: -16px;
+
+            z-index: 10;
+          }
+        }
+
+        &--right {
+          width: 30px;
+          height: 30px;
+          border-radius: 100%;
+          border: 1px solid $primary-color;
+
+          @media (min-width: 1024px) {
+            position: absolute;
+            top: -279px;
+            right: 0px;
+
+            z-index: 10;
+          }
+        }
+
+        &-icon {
           color: $primary-color;
           margin: auto;
         }
@@ -46,13 +84,18 @@
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
-    gap: 10px;
+    gap: 8px;
 
     overflow-x: auto;
     scroll-behavior: smooth;
 
     &::-webkit-scrollbar {
       display: none;
+    }
+
+    @media (min-width: 1024px) {
+      overflow-x: hidden;
+      gap: 20px;
     }
   }
 }
