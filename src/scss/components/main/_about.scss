@@ -4,12 +4,17 @@
   margin-top: 80px;
   overflow: hidden;
 
+
+  @media (min-width: 1024px) {
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+     
+  }
+
   &__image {
     background-color: $bg-default-light-color;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    
     &_photo {
       width: 100%;
     }
@@ -23,6 +28,14 @@
       font-size: 24px;
       text-transform: uppercase;
       margin-top: 20px;
+
+      @media (min-width: 1024px) {
+        font-size: 30px;
+      }
+
+      @media screen and (min-width: 1440px) {
+        font-size:48px ;
+      }
     }
 
     &_text {
@@ -31,6 +44,16 @@
       font-size: 14px;
       margin-top: 20px;
       line-height: 22px;
+
+      @media (min-width: 1024px) {
+        font-size: 18px;
+        line-height: 30px;
+      }
+
+      @media screen and (min-width: 1440px) {
+        font-size: 24px;
+        line-height: 36px;
+      }
     }
   }
 }
