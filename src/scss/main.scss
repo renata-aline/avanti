@@ -33,7 +33,7 @@ body {
 }
 
 .content {
-  // max-width: 1260px;
+  max-width: 1260px;
   width: 100%;
   box-sizing: border-box;
   padding: 0px 18px;
@@ -80,12 +80,19 @@ body {
   font-size: 14px;
   margin-top: 10px;
   font-weight: 700;
-
+  
   &.error {
     color: $text-warning-color;
   }
 
   &.success {
     color: $primary-color;
+  }
+
+  @media (min-width: 1024px) {
+    position: absolute;
+    top: 80px;
+    left:30%;
+    
   }
 }
