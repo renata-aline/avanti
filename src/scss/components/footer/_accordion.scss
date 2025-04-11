@@ -5,18 +5,40 @@
   box-sizing: border-box;
   margin-top: 30px;
 
+  @media (min-width: 1024px) {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: flex-start;
+  }
+
   &_item {
     background-color: $bg-default-color;
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
     overflow: hidden;
+
+    @media (min-width: 1024px) {
+      background-color: $bg-light-grey-color;
+      overflow: visible;
+    }
 
     &.active .site-map__accordion_item-content {
       max-height: 500px;
-      padding: 1rem;
+      padding: 10px;
+
+      @media (min-width: 1024px) {
+        max-height: none;
+        padding: 10px;
+      }
     }
 
     &.active .fa-chevron-down {
       transform: rotate(180deg);
+
+      @media (min-width: 1024px) {
+        display: none;
+      }
     }
 
     &-title {
@@ -24,14 +46,22 @@
       justify-content: space-between;
       align-items: center;
       color: $text-default-color;
-      padding: 1rem;
+      padding: 10px;
       cursor: pointer;
       font-size: 16px;
       margin: 0;
 
+      @media (min-width: 1024px) {
+        cursor: default;
+      }
+
       &--icon {
         transition: transform 0.3s ease;
         color: $primary-color;
+
+        @media (min-width: 1024px) {
+          display: none;
+        }
       }
     }
 
@@ -41,6 +71,12 @@
       max-height: 0;
       overflow: hidden;
       transition: all 0.3s ease;
+
+      @media (min-width: 1024px) {
+        max-height: none;
+        padding: 10px;
+        overflow: visible;
+      }
 
       &--link {
         margin-bottom: 10px;
