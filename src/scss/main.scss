@@ -4,6 +4,7 @@
 @import "components/header/_top-bar";
 @import "components/header/_banner";
 @import "components/header/_menu";
+@import "components/header/_menu-desktop";
 @import "components/main/_store";
 @import "components/main/_card";
 @import "components/main/_about";
@@ -14,6 +15,7 @@
 @import "components/footer/_accordion";
 @import "components/footer/_payment-method";
 @import "components/footer/_partner";
+
 html {
   scroll-behavior: smooth;
 }
@@ -99,4 +101,8 @@ body {
     top: 80px;
     left: 30%;
   }
+}
+
+.active {
+  color: $primary-color;
 }

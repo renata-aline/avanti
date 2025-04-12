@@ -92,43 +92,73 @@
               <nav class="menu__nav hidden" id="mobileMenu">
                 <ul class="menu__nav_list">
                   <li class="menu__nav_list-item">
-                    <a href="#" class="menu__nav_list-item--link"
+                    <a
+                      href="#"
+                      class="menu__nav_list-item-link hidden"
+                      id="closeMenuDesktop"
                       >Todas Categorias</a
                     >
                   </li>
 
                   <li class="menu__nav_list-item">
-                    <a href="#" class="menu__nav_list-item--link"
-                      >Departamento</a
+                    <a
+                      href="#cozinha"
+                      class="menu__nav_list-item-link"
+                      onClick="renderMenu('cozinha')"
+                      >Cozinha</a
                     >
                   </li>
                   <li class="menu__nav_list-item">
-                    <a href="#" class="menu__nav_list-item--link"
-                      >Departamento</a
+                    <a
+                      href="#sala"
+                      class="menu__nav_list-item-link"
+                      onClick="renderMenu('sala')"
+                      >Sala</a
                     >
                   </li>
                   <li class="menu__nav_list-item">
-                    <a href="#" class="menu__nav_list-item--link"
-                      >Departamento</a
+                    <a
+                      href="#banheiro"
+                      class="menu__nav_list-item-link"
+                      onClick="renderMenu('banheiro')"
+                      >Banheiro</a
                     >
                   </li>
                   <li class="menu__nav_list-item">
-                    <a href="#" class="menu__nav_list-item--link"
-                      >Departamento</a
-                    >
+                    <a href="#" class="menu__nav_list-item-link">Jardim</a>
                   </li>
                   <li class="menu__nav_list-item">
-                    <a href="#" class="menu__nav_list-item--link"
-                      >Departamento</a
-                    >
+                    <a href="#" class="menu__nav_list-item-link">Escritório</a>
                   </li>
                   <li class="menu__nav_list-item">
-                    <a href="#" class="menu__nav_list-item--link"
-                      >Departamento</a
-                    >
+                    <a href="#" class="menu__nav_list-item-link">Decoração</a>
                   </li>
                 </ul>
               </nav>
+            </div>
+          </div>
+        </div>
+
+        <!-- menu desktop -->
+        <div class="content menu-desktop" id="menuDesktop">
+          <div>
+            <h3 class="menu-desktop__title" id="menuCategoryTitle"></h3>
+            <div class="menu-desktop__items" id="menulists"></div>
+          </div>
+
+          <div class="menu-desktop__items_banner">
+            <img
+              class="menu-desktop__items_banner-photo"
+              src="/src/assets/images/banner-product-avanti.png"
+              alt="foto de uma xicara sobre uma tábua"
+            />
+            <div class="menu-desktop__items_banner-description">
+              <p class="menu-desktop__items_banner-description--text">
+                Confira os Produtos que acabaram de chegar
+              </p>
+              <a href="#" class="menu-desktop__items_banner-description--link"
+                >ver todos</a
+              >
             </div>
           </div>
         </div>
