@@ -1,6 +1,41 @@
 {
   "categories": [
     {
+      "name": "todasCategorias",
+      "category": "",
+      "links": [
+        {
+          "links": [
+            {
+              "name": "Cozinha",
+              "url": "#cozinha"
+            },
+            {
+              "name": "Sala",
+              "url": "#sala"
+            },
+            {
+              "name": "Banheiro",
+              "url": "#banheiro"
+            },
+            {
+              "name": "Jardim",
+              "url": "#jardim"
+            },
+            {
+              "name": "Escritório",
+              "url": "#escritorio"
+            },
+            {
+              "name": "Decoração",
+              "url": "#decoracao"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
       "name": "cozinha",
       "category": "Cozinha",
       "links": [

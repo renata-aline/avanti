@@ -1,0 +1,98 @@
+@import "../../base/vars";
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: "Nunito", sans-serif;
+  }
+  
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+  
+    @media (min-width: 1440px) {
+      max-width: 1920px;
+    }
+  }
+  
+  .content {
+    max-width: 1260px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 18px;
+    margin: 0 auto;
+
+    @media (min-width: 1440px) {
+      padding: 0px 18px;
+    }
+  
+    &--banner {
+      max-width: 370px;
+      width: 100%;
+      min-height: 306px;
+      box-sizing: border-box;
+    }
+  
+    &--about {
+      padding: 0;
+  
+      @media (min-width: 1024px) {
+        padding: 0px 18px;
+      }
+    }
+  
+    &--aboutProduct {
+      @media (min-width: 1024px) {
+        padding: 0 18px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        gap: 20px;
+      }
+    }
+  
+    &--contact {
+      padding: 0;
+      margin: auto;
+    }
+  
+    &--site-map {
+      padding: 0;
+      margin: auto;
+      background-color: $bg-light-grey-color;
+  
+      @media (min-width: 1024px) {
+        max-width: 100%;
+        padding: 0px 18px;
+      }
+    }
+  }
+  
+  #formMessage {
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 700;
+  
+    &.error {
+      color: $text-warning-color;
+    }
+  
+    &.success {
+      color: $primary-color;
+    }
+  
+    @media (min-width: 1024px) {
+      position: absolute;
+      top: 80px;
+      left: 30%;
+    }
+  }
+  
+  .active {
+    color: $primary-color;
+  }
+  
+  

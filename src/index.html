@@ -92,12 +92,18 @@
               <nav class="menu__nav hidden" id="mobileMenu">
                 <ul class="menu__nav_list">
                   <li class="menu__nav_list-item">
-                    <a
-                      href="#"
-                      class="menu__nav_list-item-link hidden"
+                    <!-- <i
+                      class="menu__nav_list-item-icon fa-solid fa-bars"
+                      aria-label="Menu de navegação"
+                      title="Abrir menu"
                       id="closeMenuDesktop"
-                      >Todas Categorias</a
-                    >
+                    ></i> -->
+                    <a
+                      href="#todasCategorias"
+                      class="menu__nav_list-item-link"
+                      onClick="renderMenu('todasCategorias')"
+                      >Todas Categorias
+                    </a>
                   </li>
 
                   <li class="menu__nav_list-item">
@@ -841,5 +847,9 @@
       </footer>
     </div>
     <script src="/src/js/main.js"></script>
+    <script src="/src/js/menu.js"></script>
+    <script src="/src/js/search.js"></script>
+    <script src="/src/js/slider.js"></script>
+    <script src="/src/js/accordion.js"></script>
   </body>
 </html>

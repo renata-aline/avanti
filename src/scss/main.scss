@@ -1,108 +1,19 @@
 @import "base/reset";
 @import "base/vars";
 
-@import "components/header/_top-bar";
-@import "components/header/_banner";
-@import "components/header/_menu";
-@import "components/header/_menu-desktop";
-@import "components/main/_store";
-@import "components/main/_card";
-@import "components/main/_about";
-@import "components/main/_about-product";
-@import "components/main/_contact";
-@import "components/main/_newsletter";
-@import "components/footer/_site-map";
-@import "components/footer/_accordion";
-@import "components/footer/_payment-method";
-@import "components/footer/_partner";
+@import "components/global";
+@import "components/header/top-bar";
+@import "components/header/banner";
+@import "components/header/menu";
+@import "components/header/menu-desktop";
+@import "components/main/store";
+@import "components/main/card";
+@import "components/main/about";
+@import "components/main/about-product";
+@import "components/main/contact";
+@import "components/main/newsletter";
+@import "components/footer/site-map";
+@import "components/footer/accordion";
+@import "components/footer/payment-method";
+@import "components/footer/partner";
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Nunito", sans-serif;
-}
-
-.container {
-  width: 100%;
-  margin: 0 auto;
-  padding-bottom: 10px;
-
-  @media (min-width: 1024px) {
-    // max-width: 1920px;
-  }
-}
-
-.content {
-  max-width: 1260px;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0px 18px;
-  margin: 0 auto;
-
-  &--banner {
-    max-width: 370px;
-    width: 100%;
-    min-height: 306px;
-    box-sizing: border-box;
-  }
-
-  &--about {
-    padding: 0;
-
-    @media (min-width: 1024px) {
-      padding: 0px 18px;
-    }
-  }
-
-  &--aboutProduct {
-    @media (min-width: 1024px) {
-      padding: 0 18px;
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row-reverse;
-      gap: 20px;
-    }
-  }
-
-  &--contact {
-    padding: 0;
-    margin: auto;
-  }
-
-  &--site-map {
-    padding: 0;
-    margin: auto;
-    background-color: $bg-light-grey-color;
-
-    @media (min-width: 1024px) {
-      max-width: 100%;
-      padding: 0px 18px;
-    }
-  }
-}
-
-#formMessage {
-  font-size: 14px;
-  margin-top: 10px;
-  font-weight: 700;
-
-  &.error {
-    color: $text-warning-color;
-  }
-
-  &.success {
-    color: $primary-color;
-  }
-
-  @media (min-width: 1024px) {
-    position: absolute;
-    top: 80px;
-    left: 30%;
-  }
-}
-
-.active {
-  color: $primary-color;
-}
