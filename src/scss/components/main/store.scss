@@ -82,20 +82,14 @@
 
   &__products {
     display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-    gap: 8px;
 
-    overflow-x: auto;
+    margin-top: 30px;
+
+    overflow: hidden;
     scroll-behavior: smooth;
 
     &::-webkit-scrollbar {
       display: none;
-    }
-
-    @media (min-width: 1024px) {
-      overflow-x: hidden;
-      gap: 20px;
     }
   }
 }

@@ -5,27 +5,16 @@
   margin-top: 80px;
   overflow: hidden;
 
-  height: 100%;
-
   @media screen and (min-width: 1024px) {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
   }
 
   &_image {
     margin-top: 30px;
 
-    @media screen and (min-width: 1024px) {
-      width: 50%;
-    }
-
     &_photo {
       @media screen and (min-width: 1024px) {
         width: 100%;
-        display: block;
-        object-fit: cover;
       }
     }
   }
@@ -37,8 +26,6 @@
       align-items: center;
       justify-content: center;
       margin: auto;
-
-      width: 50%;
     }
 
     &_title {
@@ -66,7 +53,6 @@
       margin-top: 20px;
 
       @media (min-width: 1024px) {
-        width: auto;
       }
 
       &_icon {
@@ -79,8 +65,8 @@
         justify-content: center;
 
         @media (min-width: 1024px) {
-          width: 90px;
-          height: 90px;
+          width: 80px;
+          height: 80px;
         }
 
         &-location {
@@ -88,7 +74,7 @@
           color: $text-light-color;
 
           @media (min-width: 1024px) {
-            font-size: 40px;
+            font-size: 30px;
           }
         }
       }

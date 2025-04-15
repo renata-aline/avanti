@@ -23,26 +23,15 @@
   overflow: hidden;
   background-color: #c1c2c557;
   margin-top: 20px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
 
   &__image {
     margin-left: -280px;
-
-    @media (min-width: 1024px) {
-      margin-left: -226px;
-    }
-
-    @media (min-width: 1440px) {
-      margin-left: -35px;
-    }
-
-    @media (min-width: 1920px) {
-      margin-left: 460px;
-    }
 
     &_photo {
       width: 100%;
@@ -56,12 +45,8 @@
   }
 
   &__description {
-    width: 100%;
+    width: initial;
     text-align: center;
-
-    @media (min-width: 1024px) {
-      width: none;
-    }
 
     &_title {
       font-size: 40px;

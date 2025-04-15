@@ -9,17 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// -----
-
-document.addEventListener("DOMContentLoaded", () => {
-  const desktopMenu = document.getElementById("closeMenuDesktop");
-  const listCategory = document.getElementById("listCategory");
-
-  desktopMenu.addEventListener("click", () => {
-    listCategory.classList.toggle("hidden");
-  });
-});
-
 // LOGIC FOR DESKTOP MENU
 let menus = [];
 fetch("/src/js/menu.json")
@@ -76,7 +65,8 @@ function renderMenu(item) {
           index === 0 ? "menu-desktop__items_list-item--link--active" : ""
         }">
                 ${link.name}
-              </a></li>
+              </a>
+                     
             `;
       });
       ul.innerHTML = itens;

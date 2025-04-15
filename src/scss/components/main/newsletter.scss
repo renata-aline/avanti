@@ -80,3 +80,23 @@
     }
   }
 }
+
+#formMessage {
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: 700;
+
+  &.error {
+    color: $text-warning-color;
+  }
+
+  &.success {
+    color: $primary-color;
+  }
+
+  @media (min-width: 1024px) {
+    position: absolute;
+    top: 80px;
+    left: 30%;
+  }
+}

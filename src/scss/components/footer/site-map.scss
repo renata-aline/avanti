@@ -3,11 +3,17 @@
 .site-map {
   margin-top: 80px;
   overflow: hidden;
+  background-color: $bg-light-grey-color;
 
-  @media (min-width: 1024px) {
+  .content--site-map {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+    }
   }
 
   &__social-media {

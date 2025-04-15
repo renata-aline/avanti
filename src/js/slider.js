@@ -4,11 +4,16 @@ const productWrapper = document.querySelector(".store__products");
 const btnLeft = document.getElementById("btnLeft");
 const btnRight = document.getElementById("btnRight");
 
-btnLeft.addEventListener("click", () => {
-  productWrapper.scrollLeft -= 176;
-  behavior: "smooth";
+const resizeObserver = new ResizeObserver((entries) => {
+  const card = productWrapper.firstElementChild;
+  const cardWidth = card.offsetWidth + 8;
+  console.log(cardWidth);
+  btnLeft.addEventListener("click", () => {
+    productWrapper.scrollLeft -= cardWidth;
+  });
+  btnRight.addEventListener("click", () => {
+    productWrapper.scrollLeft += cardWidth;
+  });
 });
-btnRight.addEventListener("click", () => {
-  productWrapper.scrollLeft += 176;
-  behavior: "smooth";
-});
+
+resizeObserver.observe(productWrapper);

@@ -1,14 +1,16 @@
 @import "../../base/vars";
 
 .menu-desktop {
-  // display: none;
+  background-color: $bg-default-color;
+  display: none;
   box-sizing: border-box;
-    box-shadow: 0px 4px 8px -1px #0000001a;
+  box-shadow: 0px 4px 8px -1px #0000001a;
 
-    
+  position: absolute;
+  right: 0;
+  left: 0;
 
   @media (min-width: 1024px) {
-    
     &.active {
       display: flex;
     }
@@ -24,7 +26,6 @@
 
   &__items {
     box-sizing: border-box;
-   
 
     display: flex;
 
@@ -33,12 +34,23 @@
     padding-inline: 16px;
 
     &_list {
+      display: none;
+
+      @media (min-width: 1024px) {
+        display: block;
+      }
       list-style: none;
-      font-size: 14px;
+      font-size: 16px;
       line-height: 24px;
 
       &-item {
-        margin-top: 10px;
+        margin-top: 20px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+
         &--link {
           text-decoration: none;
           color: $text-secondary-color;
@@ -56,8 +68,13 @@
     }
 
     &_banner {
+      display: none;
       position: relative;
       margin-left: auto;
+
+      @media (min-width: 1024px) {
+        display: block;
+      }
       &-photo {
         margin-top: 10px;
         border-radius: 10px;

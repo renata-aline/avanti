@@ -1,11 +1,14 @@
 @import "base/reset";
 @import "base/vars";
 
+@import'components/global.scss';
+
 @import "components/global";
 @import "components/header/top-bar";
 @import "components/header/banner";
 @import "components/header/menu";
 @import "components/header/menu-desktop";
+
 @import "components/main/store";
 @import "components/main/card";
 @import "components/main/about";

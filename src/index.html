@@ -14,10 +14,8 @@
       rel="stylesheet"
     />
 
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    /> -->
+    <link rel="icon" type="image/png" href="./assets/favicon-avanti.ico" />
+
     <link rel="stylesheet" href="/src/css/main.css" />
   </head>
   <body>
@@ -43,6 +41,7 @@
                 id="hamburgerMenu"
               ></i>
             </div>
+
             <div class="top-bar__logo">
               <img
                 src="/src/assets/images/logo-avanti.png"
@@ -50,6 +49,7 @@
                 class="top-bar__logo_img"
               />
             </div>
+
             <div class="top-bar__shopping">
               <i
                 class="top-bar__shopping_icon fa-solid fa-cart-shopping"
@@ -84,20 +84,15 @@
                 title="Buscar"
               ></i>
             </div>
+
             <p class="top-bar__search_message" id="searchMessage"></p>
           </div>
 
           <div class="menu">
             <div class="content">
               <nav class="menu__nav hidden" id="mobileMenu">
-                <ul class="menu__nav_list">
+                <ul class="menu__nav_list menu__nav_list--desktop">
                   <li class="menu__nav_list-item">
-                    <!-- <i
-                      class="menu__nav_list-item-icon fa-solid fa-bars"
-                      aria-label="Menu de navegação"
-                      title="Abrir menu"
-                      id="closeMenuDesktop"
-                    ></i> -->
                     <a
                       href="#todasCategorias"
                       class="menu__nav_list-item-link"
@@ -131,20 +126,34 @@
                     >
                   </li>
                   <li class="menu__nav_list-item">
-                    <a href="#" class="menu__nav_list-item-link">Jardim</a>
+                    <a
+                      href="#jardim"
+                      class="menu__nav_list-item-link"
+                      onClick="renderMenu('jardim')"
+                      >Jardim</a
+                    >
                   </li>
                   <li class="menu__nav_list-item">
-                    <a href="#" class="menu__nav_list-item-link">Escritório</a>
+                    <a
+                      href="#escritorio"
+                      class="menu__nav_list-item-link"
+                      onClick="renderMenu('escritorio')"
+                      >Escritório</a
+                    >
                   </li>
                   <li class="menu__nav_list-item">
-                    <a href="#" class="menu__nav_list-item-link">Decoração</a>
+                    <a
+                      href="#decoração"
+                      class="menu__nav_list-item-link"
+                      onClick="renderMenu('decoracao')"
+                      >Decoração</a
+                    >
                   </li>
                 </ul>
               </nav>
             </div>
           </div>
         </div>
-
         <!-- menu desktop -->
         <div class="content menu-desktop" id="menuDesktop">
           <div>
@@ -170,7 +179,7 @@
         </div>
       </header>
       <div class="banner-marketing">
-        <div class="content content--banner">
+        <div class="content">
           <div class="banner-marketing__image">
             <img
               src="/src/assets/images/banner.png"
@@ -178,20 +187,20 @@
               class="banner-marketing__image_photo"
             />
           </div>
-        </div>
-        <div class="banner-marketing__description">
-          <h1 class="banner-marketing__description_title">
-            Super
-            <span class="banner-marketing__description_title--light">
-              Sale
-            </span>
-          </h1>
-          <p class="banner-marketing__description_text">
-            Selected items up to
-            <span class="banner-marketing__description_text--bold"
-              >50% off</span
-            >
-          </p>
+          <div class="banner-marketing__description">
+            <h1 class="banner-marketing__description_title">
+              Super
+              <span class="banner-marketing__description_title--light">
+                Sale
+              </span>
+            </h1>
+            <p class="banner-marketing__description_text">
+              Selected items up to
+              <span class="banner-marketing__description_text--bold"
+                >50% off</span
+              >
+            </p>
+          </div>
         </div>
       </div>
       <main>
@@ -234,7 +243,36 @@
                 <button class="store__products_card_button">comprar</button>
               </div>
 
-              <!-- card1-->
+              <div class="store__products_card">
+                <div class="store__products_card_new">
+                  <span class="store__products_card_new--text">novo</span>
+                </div>
+                <img
+                  src="/src/assets/images/product.png"
+                  alt="product"
+                  class="store__products_card_img"
+                />
+                <h3 class="store__products_card_title">
+                  Lorem ipsum dolor sit amet consectetuer adipiscing elit
+                </h3>
+                <div class="store__products_card_price">
+                  <div>
+                    <p class="store__products_card_price--old">R$ 100,00</p>
+
+                    <p class="store__products_card_price--new">R$ 79,00</p>
+                  </div>
+
+                  <div class="store__products_card_price_discount">
+                    <p class="store__products_card_price_discount--value">
+                      10% off
+                    </p>
+                  </div>
+                </div>
+                <p class="store__products_card_installments">
+                  Ou em até <strong>10x de R$ 7,90</strong>
+                </p>
+                <button class="store__products_card_button">comprar</button>
+              </div>
 
               <div class="store__products_card">
                 <div class="store__products_card_new">
@@ -267,40 +305,6 @@
                 <button class="store__products_card_button">comprar</button>
               </div>
 
-              <!-- card2-->
-
-              <div class="store__products_card">
-                <div class="store__products_card_new">
-                  <span class="store__products_card_new--text">novo</span>
-                </div>
-                <img
-                  src="/src/assets/images/product.png"
-                  alt="product"
-                  class="store__products_card_img"
-                />
-                <h3 class="store__products_card_title">
-                  Lorem ipsum dolor sit amet consectetuer adipiscing elit
-                </h3>
-                <div class="store__products_card_price">
-                  <div>
-                    <p class="store__products_card_price--old">R$ 100,00</p>
-
-                    <p class="store__products_card_price--new">R$ 79,00</p>
-                  </div>
-
-                  <div class="store__products_card_price_discount">
-                    <p class="store__products_card_price_discount--value">
-                      10% off
-                    </p>
-                  </div>
-                </div>
-                <p class="store__products_card_installments">
-                  Ou em até <strong>10x de R$ 7,90</strong>
-                </p>
-                <button class="store__products_card_button">comprar</button>
-              </div>
-
-              <!-- card3 -->
               <div class="store__products_card">
                 <div class="store__products_card_new">
                   <span class="store__products_card_new--text">novo</span>
@@ -333,7 +337,6 @@
                 <button class="store__products_card_button">comprar</button>
               </div>
 
-              <!-- card4 -->
               <div class="store__products_card">
                 <div class="store__products_card_new">
                   <span class="store__products_card_new--text">novo</span>
@@ -365,7 +368,6 @@
                 <button class="store__products_card_button">comprar</button>
               </div>
 
-              <!-- kkk -->
               <div class="store__products_card">
                 <div class="store__products_card_new">
                   <span class="store__products_card_new--text">novo</span>
@@ -397,7 +399,6 @@
                 <button class="store__products_card_button">comprar</button>
               </div>
 
-              <!-- kkk -->
               <div class="store__products_card">
                 <div class="store__products_card_new">
                   <span class="store__products_card_new--text">novo</span>
@@ -428,8 +429,6 @@
                 </p>
                 <button class="store__products_card_button">comprar</button>
               </div>
-
-              <!-- crd5 -->
 
               <div class="store__products_card">
                 <div class="store__products_card_new">
@@ -484,123 +483,135 @@
         </section>
 
         <section class="about">
-          <div class="content content--about">
-            <div class="about__image">
-              <img
-                src="/src/assets/images/banner-avanti.png"
-                alt="imagem de uma xicara"
-                class="about__image_photo"
-              />
+          <div class="about__content">
+            <div class="content">
+              <div class="about__content_image">
+                <img
+                  src="/src/assets/images/banner-avanti.png"
+                  alt="imagem de uma xicara"
+                  class="about__content_image-photo"
+                />
+              </div>
             </div>
-          </div>
-          <div class="content">
-            <div class="about__description">
-              <h1 class="about__description_title">Lorem Ipsum</h1>
-              <p class="about__description_text">
-                Aenean massa. Cum sociis natoque penatibus et magnis dis
-                parturient montes, nascetur ridiculus mus. Donec quam felis,
-                ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-                consequat massa quis enim.
-              </p>
-              <p class="about__description_text">
-                Cras dignissim est et pellentesque tincidunt. Praesent bibendum
-                quis velit a aliquam. Ut vestibulum turpis eget mi iaculis
-                ullamcorper. Curabitur nec metus sed tortor sollicitudin porta
-                nec eu enim. Ut fermentum scelerisque tortor mollis volutpat.
-                Mauris iaculis magna nisl, vel porttitor augue placerat et.
-              </p>
+            <div class="content">
+              <div class="about__content_description">
+                <h1 class="about__content_description-title">Lorem Ipsum</h1>
+                <p class="about__content_description-text">
+                  Aenean massa. Cum sociis natoque penatibus et magnis dis
+                  parturient montes, nascetur ridiculus mus. Donec quam felis,
+                  ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+                  consequat massa quis enim.
+                </p>
+                <p class="about__content_description-text">
+                  Cras dignissim est et pellentesque tincidunt. Praesent
+                  bibendum quis velit a aliquam. Ut vestibulum turpis eget mi
+                  iaculis ullamcorper. Curabitur nec metus sed tortor
+                  sollicitudin porta nec eu enim. Ut fermentum scelerisque
+                  tortor mollis volutpat. Mauris iaculis magna nisl, vel
+                  porttitor augue placerat et.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
         <section class="about__product">
-          <div class="content content--aboutProduct">
-            <div class="about__product_image">
-              <img
-                src="/src/assets/images/banner-product-avanti.png"
-                alt="imagem de uma xicara sobre uma tábua"
-                class="about__product_image_photo"
-              />
+          <div class="about__content">
+            <div class="content">
+              <div class="about__product_image">
+                <img
+                  src="/src/assets/images/banner-product-avanti.png"
+                  alt="imagem de uma xicara sobre uma tábua"
+                  class="about__product_image_photo"
+                />
+              </div>
             </div>
-            <div class="about__product_description">
-              <h1 class="about__product_description_title">Lorem Ipsum</h1>
+            <div class="content">
+              <div class="about__product_description">
+                <h1 class="about__product_description_title">Lorem Ipsum</h1>
 
-              <div class="about__product_description_text">
-                <div class="about__product_description_text_icon">
-                  <i
-                    class="about__product_description_text_icon-location fa-solid fa-location-dot"
-                  ></i>
+                <div class="about__product_description_text">
+                  <div class="about__product_description_text_icon">
+                    <i
+                      class="about__product_description_text_icon-location fa-solid fa-location-dot"
+                    ></i>
+                  </div>
+                  <p class="about__product_description_text_paragraph">
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. Donec quam felis,
+                    ultricies nec, pellentesque eu, pretium quis, sem.
+                  </p>
                 </div>
-                <p class="about__product_description_text_paragraph">
-                  Aenean massa. Cum sociis natoque penatibus et magnis dis
-                  parturient montes, nascetur ridiculus mus. Donec quam felis,
-                  ultricies nec, pellentesque eu, pretium quis, sem.
-                </p>
-              </div>
-              <div class="about__product_description_text">
-                <div class="about__product_description_text_icon">
-                  <i
-                    class="about__product_description_text_icon-location fa-solid fa-location-dot"
-                  ></i>
+                <div class="about__product_description_text">
+                  <div class="about__product_description_text_icon">
+                    <i
+                      class="about__product_description_text_icon-location fa-solid fa-location-dot"
+                    ></i>
+                  </div>
+                  <p class="about__product_description_text_paragraph">
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. Donec quam felis,
+                    ultricies nec, pellentesque eu, pretium quis, sem.
+                  </p>
                 </div>
-                <p class="about__product_description_text_paragraph">
-                  Aenean massa. Cum sociis natoque penatibus et magnis dis
-                  parturient montes, nascetur ridiculus mus. Donec quam felis,
-                  ultricies nec, pellentesque eu, pretium quis, sem.
-                </p>
-              </div>
-              <div class="about__product_description_text">
-                <div class="about__product_description_text_icon">
-                  <i
-                    class="about__product_description_text_icon-location fa-solid fa-location-dot"
-                  ></i>
+                <div class="about__product_description_text">
+                  <div class="about__product_description_text_icon">
+                    <i
+                      class="about__product_description_text_icon-location fa-solid fa-location-dot"
+                    ></i>
+                  </div>
+                  <p class="about__product_description_text_paragraph">
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. Donec quam felis,
+                    ultricies nec, pellentesque eu, pretium quis, sem.
+                  </p>
                 </div>
-                <p class="about__product_description_text_paragraph">
-                  Aenean massa. Cum sociis natoque penatibus et magnis dis
-                  parturient montes, nascetur ridiculus mus. Donec quam felis,
-                  ultricies nec, pellentesque eu, pretium quis, sem.
-                </p>
               </div>
             </div>
           </div>
         </section>
 
         <section class="about">
-          <div class="content content--about">
-            <div class="about__image">
-              <img
-                src="/src/assets/images/banner-avanti.png"
-                alt="imagem de uma xicara"
-                class="about__image_photo"
-              />
+          <div class="about__content">
+            <div class="content">
+              <div class="about__content_image">
+                <img
+                  src="/src/assets/images/banner-avanti.png"
+                  alt="imagem de uma xicara"
+                  class="about__content_image-photo"
+                />
+              </div>
             </div>
-          </div>
-          <div class="content">
-            <div class="about__description">
-              <h1 class="about__description_title">Lorem Ipsum</h1>
-              <p class="about__description_text">
-                Aenean massa. Cum sociis natoque penatibus et magnis dis
-                parturient montes, nascetur ridiculus mus. Donec quam felis,
-                ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-                consequat massa quis enim.
-              </p>
-              <p class="about__description_text">
-                Cras dignissim est et pellentesque tincidunt. Praesent bibendum
-                quis velit a aliquam. Ut vestibulum turpis eget mi iaculis
-                ullamcorper. Curabitur nec metus sed tortor sollicitudin porta
-                nec eu enim. Ut fermentum scelerisque tortor mollis volutpat.
-                Mauris iaculis magna nisl, vel porttitor augue placerat et.
-              </p>
+            <div class="content">
+              <div class="about__content_description">
+                <h1 class="about__content_description-title">Lorem Ipsum</h1>
+                <p class="about__content_description-text">
+                  Aenean massa. Cum sociis natoque penatibus et magnis dis
+                  parturient montes, nascetur ridiculus mus. Donec quam felis,
+                  ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+                  consequat massa quis enim.
+                </p>
+                <p class="about__content_description-text">
+                  Cras dignissim est et pellentesque tincidunt. Praesent
+                  bibendum quis velit a aliquam. Ut vestibulum turpis eget mi
+                  iaculis ullamcorper. Curabitur nec metus sed tortor
+                  sollicitudin porta nec eu enim. Ut fermentum scelerisque
+                  tortor mollis volutpat. Mauris iaculis magna nisl, vel
+                  porttitor augue placerat et.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
         <section class="contact">
-          <div class="content content--contact">
-            <p class="contact__text">
-              Entre em contato conosco e verifique a disponibilidade para sua
-              região!
-            </p>
+          <div class="contact__description">
+            <div class="content">
+              <p class="contact__description_text">
+                Entre em contato conosco e verifique a disponibilidade para sua
+                região!
+              </p>
+            </div>
           </div>
         </section>
 
@@ -633,14 +644,15 @@
               <button type="submit" class="newsletter__form_button">
                 Cadastrar
               </button>
+
               <p class="newsletter__form_message" id="formMessage"></p>
             </form>
           </div>
         </section>
       </main>
       <footer>
-        <div class="content content--site-map">
-          <div class="site-map">
+        <div class="site-map">
+          <div class="content content--site-map">
             <div class="site-map__social-media">
               <img
                 src="/src/assets/images/logo-avanti.png"
@@ -846,10 +858,11 @@
         </div>
       </footer>
     </div>
-    <script src="/src/js/main.js"></script>
+
     <script src="/src/js/menu.js"></script>
     <script src="/src/js/search.js"></script>
     <script src="/src/js/slider.js"></script>
     <script src="/src/js/accordion.js"></script>
+    <script src="/src/js/form.js"></script>
   </body>
 </html>

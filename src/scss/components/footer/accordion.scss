@@ -3,7 +3,7 @@
 .site-map__accordion {
   width: 100%;
   box-sizing: border-box;
-  margin-top: 30px;
+  margin-top: 40px;
 
   @media (min-width: 1024px) {
     width: auto;
@@ -85,24 +85,8 @@
         font-size: 14px;
         transition: color 0.3s ease;
 
-        &::after {
-          content: "";
-          display: block;
-          width: 20%;
-          bottom: -8px;
-          height: 1px;
-          background-color: $primary-dak-color;
-
-          transition: transform 0.3s;
-          transform: scale(0);
-        }
-
-        &:hover::after {
-          transform: scale(1);
-        }
-
         &:hover {
-          color: $primary-dak-color;
+          @include hover-underline($color: $primary-color);
         }
       }
     }

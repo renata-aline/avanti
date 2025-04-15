@@ -58,6 +58,7 @@
   }
 
   &__search {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -84,6 +85,7 @@
     &_icon {
       margin-right: 10px;
     }
+
     &_message {
       font-size: 14px;
       margin-top: 10px;
@@ -93,7 +95,7 @@
       @media (min-width: 1024px) {
         position: absolute;
         top: 130px;
-        left: 439px;
+        left: 50%;
       }
     }
   }
