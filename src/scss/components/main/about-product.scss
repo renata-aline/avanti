@@ -11,6 +11,8 @@
 
   &_image {
     margin-top: 30px;
+    display: flex;
+    justify-content: center;
 
     &_photo {
       @media screen and (min-width: 1024px) {
@@ -72,10 +74,6 @@
         &-location {
           font-size: 30px;
           color: $text-light-color;
-
-          @media (min-width: 1024px) {
-            font-size: 30px;
-          }
         }
       }
 

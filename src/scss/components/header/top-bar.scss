@@ -10,6 +10,7 @@
   @media (min-width: 1024px) {
     height: 120px;
     gap: 30px;
+    margin:0 20px 0 20px;
   }
 
   &__menu {
@@ -31,8 +32,8 @@
 
     &_count {
       position: absolute;
-      top: -18px;
-      right: -6px;
+      top: -20px;
+      right: -10px;
       background-color: $primary-color;
       color: $text-light-color;
       font-size: 12px;
