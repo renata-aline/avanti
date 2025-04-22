@@ -1,0 +1,120 @@
+@use "../../base/vars" as *;
+
+.menu-desktop {
+  background-color: $bg-default-color;
+  display: none;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px -1px #0000001a;
+
+  position: absolute;
+  right: 0;
+  left: 0;
+
+  @media (min-width: 1024px) {
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: $text-default-color;
+    margin-left: 20px;
+  }
+
+  &__items {
+    box-sizing: border-box;
+
+    display: flex;
+
+    gap: 100px;
+    margin: 0;
+    padding-inline: 16px;
+
+    &_list {
+      display: none;
+      list-style: none;
+      font-size: 16px;
+      line-height: 24px;
+
+      @media (min-width: 1024px) {
+        display: block;
+      }
+
+      &-item {
+        margin-top: 20px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+
+        &--link {
+          text-decoration: none;
+          color: $text-secondary-color;
+          font-weight: 400;
+
+          &:hover {
+            color: $primary-color;
+          }
+
+          &--active {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+
+    &_banner {
+      display: none;
+      position: relative;
+      margin-left: auto;
+      padding: 18px 0;
+
+      @media (min-width: 1024px) {
+        display: block;
+      }
+      &-photo {
+        border-radius: 10px;
+      }
+
+      &-description {
+        position: absolute;
+        top: 94px;
+        right: 173px;
+
+        box-sizing: border-box;
+        overflow: hidden;
+        width: 130px;
+        height: 207px;
+        z-index: 10;
+        color: $text-light-color;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &--text {
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 27px;
+        }
+        &--link {
+          text-decoration: none;
+          color: $text-light-color;
+          font-weight: 700;
+          font-size: 12px;
+          cursor: pointer;
+          text-transform: uppercase;
+          border: 1px solid $text-light-color;
+          border-radius: 10px;
+          padding: 10px 8px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

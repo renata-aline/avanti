@@ -1,0 +1,27 @@
+@mixin hover-underline($color: $primary-dak-color, $underline-width: 100%, $underline-height: 1px, $offset: -7px) {
+    position: relative;
+    color: $color;
+  
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: $underline-width;
+      height: $underline-height;
+      bottom: $offset;
+      left: 0;
+      background-color: $color;
+      transform: scale(0);
+      transition: transform 0.3s;
+      transform-origin: left;
+    }
+  
+    &:hover {
+      color: $color;
+  
+      &::after {
+        transform: scale(1);
+      }
+    }
+  }
+  

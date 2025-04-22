@@ -1,0 +1,53 @@
+@use "../../base/vars" as *;
+@use "../../base/mixins" as *;
+
+.menu__nav {
+  background-color: $bg-default-color;
+  position: absolute;
+  box-sizing: border-box;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  padding: 16px;
+  z-index: 10;
+
+  @media (min-width: 1024px) {
+    position: static;
+    background-color: transparent;
+    width: auto;
+    padding: 0;
+  }
+
+  &_list {
+    list-style: none;
+    padding: 0;
+
+    @media (min-width: 1024px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    &-item {
+      margin-bottom: 16px;
+
+      &-link {
+        text-decoration: none;
+        color: $text-secondary-color;
+        font-weight: 700;
+
+        &:hover {
+          @include hover-underline($color: $primary-color);
+        }
+      }
+    }
+  }
+  &.hidden {
+    display: none;
+
+    @media (min-width: 1024px) {
+      display: block;
+    }
+  }
+}

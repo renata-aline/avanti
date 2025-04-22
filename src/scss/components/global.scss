@@ -1,0 +1,27 @@
+@use "../base/vars" as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+.content {
+  max-width: 1260px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0px 18px;
+  margin: 0 auto;
+}
+
+.active {
+  color: $primary-color;
+}
