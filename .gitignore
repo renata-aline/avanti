@@ -1,0 +1,14 @@
+# Ignora dependências
+node_modules/
+
+# Ignora arquivos compilados do Sass (se quiser subir só o SCSS)
+css/
+
+# Ignora arquivos do sistema
+.DS_Store
+
+# Ignora pastas do editor
+.vscode/
+
+# Logs
+npm-debug.log
