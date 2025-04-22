@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avanti</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/png" href="./assets/favicon-avanti.ico" />
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="banner-voucher">
+        <div class="content">
+          <p class="banner-voucher__text">
+            Ganhe
+            <span class="banner-voucher__text_value">R$10,00 </span> de desconto
+            no seu primeiro pedido. Utilize o cupom DESCONTO10
+          </p>
+        </div>
+      </div>
+
+      <header>
+        <div class="content">
+          <div class="top-bar">
+            <div class="top-bar__menu">
+              <i
+                class="top-bar__menu_icon fa-solid fa-bars"
+                aria-label="Menu de navegação"
+                title="Abrir menu"
+                id="hamburgerMenu"
+              ></i>
+            </div>
+
+            <div class="top-bar__logo">
+              <img
+                src="assets/images/logo-avanti.png"
+                alt="logo Avanti"
+                class="top-bar__logo_img"
+              />
+            </div>
+
+            <div class="top-bar__shopping">
+              <i
+                class="top-bar__shopping_icon fa-solid fa-cart-shopping"
+                aria-label="Carrinho de compras"
+                title="Ver carrinho"
+              ></i>
+              <span class="top-bar__shopping_count" id="cartCount">3</span>
+            </div>
+
+            <div class="top-bar__user">
+              <i
+                class="top-bar__user_icon fa-solid fa-user"
+                aria-label="Login"
+                title="Login"
+              ></i>
+              <p class="top-bar__user_message">
+                Olá,
+                <span id="userName" class="top-bar__user_message--name"
+                  >Cliente!</span
+                >
+              </p>
+            </div>
+
+            <div class="top-bar__search">
+              <input
+                class="top-bar__search_input"
+                type="text"
+                placeholder="O que você procura?"
+              />
+              <i
+                class="top-bar__search_icon fa-solid fa-magnifying-glass"
+                aria-label="Buscar"
+                title="Buscar"
+              ></i>
+              <p class="top-bar__search_message" id="searchMessage"></p>
+            </div>
+          </div>
+
+          <div class="menu">
+            <div class="content">
+              <nav class="menu__nav hidden" id="mobileMenu">
+                <ul class="menu__nav_list menu__nav_list--desktop">
+                  <li class="menu__nav_list-item">
+                    <a
+                      href="#todasCategorias"
+                      class="menu__nav_list-item-link"
+                      onClick="renderMenu('todasCategorias')"
+                      >Todas Categorias
+                    </a>
+                  </li>
+
+                  <li class="menu__nav_list-item">
+                    <a
+                      href="#cozinha"
+                      class="menu__nav_list-item-link"
+                      onClick="renderMenu('cozinha')"
+                      >Cozinha</a
+                    >
+                  </li>
+                  <li class="menu__nav_list-item">
+                    <a
+                      href="#sala"
+                      class="menu__nav_list-item-link"
+                      onClick="renderMenu('sala')"
+                      >Sala</a
+                    >
+                  </li>
+                  <li class="menu__nav_list-item">
+                    <a
+                      href="#banheiro"
+                      class="menu__nav_list-item-link"
+                      onClick="renderMenu('banheiro')"
+                      >Banheiro</a
+                    >
+                  </li>
+                  <li class="menu__nav_list-item">
+                    <a
+                      href="#jardim"
+                      class="menu__nav_list-item-link"
+                      onClick="renderMenu('jardim')"
+                      >Jardim</a
+                    >
+                  </li>
+                  <li class="menu__nav_list-item">
+                    <a
+                      href="#escritorio"
+                      class="menu__nav_list-item-link"
+                      onClick="renderMenu('escritorio')"
+                      >Escritório</a
+                    >
+                  </li>
+                  <li class="menu__nav_list-item">
+                    <a
+                      href="#decoração"
+                      class="menu__nav_list-item-link"
+                      onClick="renderMenu('decoracao')"
+                      >Decoração</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <!-- menu desktop -->
+        <div class="content menu-desktop" id="menuDesktop">
+          <div>
+            <h3 class="menu-desktop__title" id="menuCategoryTitle"></h3>
+            <div class="menu-desktop__items" id="menulists"></div>
+          </div>
+
+          <div class="menu-desktop__items_banner">
+            <img
+              class="menu-desktop__items_banner-photo"
+              src="assets/images/banner-product-avanti.png"
+              alt="foto de uma xicara sobre uma tábua"
+            />
+            <div class="menu-desktop__items_banner-description">
+              <p class="menu-desktop__items_banner-description--text">
+                Confira os Produtos que acabaram de chegar
+              </p>
+              <a href="#" class="menu-desktop__items_banner-description--link"
+                >ver todos</a
+              >
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="banner-marketing">
+        <div class="content">
+          <div class="banner-marketing__image">
+            <img
+              src="assets/images/banner.png"
+              alt="banner "
+              class="banner-marketing__image_photo"
+            />
+          </div>
+          <div class="banner-marketing__description">
+            <h1 class="banner-marketing__description_title">
+              Super
+              <span class="banner-marketing__description_title--light">
+                Sale
+              </span>
+            </h1>
+            <p class="banner-marketing__description_text">
+              Selected items up to
+              <span class="banner-marketing__description_text--bold"
+                >50% off</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <main>
+        <section class="store">
+          <div class="content">
+            <div class="store__items">
+              <h2 class="store__items_title">lançamentos</h2>
+              <a href="#" class="store__items_link">ver mais</a>
+            </div>
+
+            <div class="store__products">
+              <div class="store__products_card">
+                <div class="store__products_card_new">
+                  <span class="store__products_card_new--text">novo</span>
+                </div>
+                <img
+                  src="assets/images/product.png"
+                  alt="product"
+                  class="store__products_card_img"
+                />
+                <h3 class="store__products_card_title">
+                  Lorem ipsum dolor sit amet consectetuer adipiscing elit
+                </h3>
+                <div class="store__products_card_price">
+                  <div>
+                    <p class="store__products_card_price--old">R$ 100,00</p>
+
+                    <p class="store__products_card_price--new">R$ 79,00</p>
+                  </div>
+
+                  <div class="store__products_card_price_discount">
+                    <p class="store__products_card_price_discount--value">
+                      10% off
+                    </p>
+                  </div>
+                </div>
+                <p class="store__products_card_installments">
+                  Ou em até <strong>10x de R$ 7,90</strong>
+                </p>
+                <button class="store__products_card_button">comprar</button>
+              </div>
+
+              <div class="store__products_card">
+                <div class="store__products_card_new">
+                  <span class="store__products_card_new--text">novo</span>
+                </div>
+                <img
+                  src="assets/images/product.png"
+                  alt="product"
+                  class="store__products_card_img"
+                />
+                <h3 class="store__products_card_title">
+                  Lorem ipsum dolor sit amet consectetuer adipiscing elit
+                </h3>
+                <div class="store__products_card_price">
+                  <div>
+                    <p class="store__products_card_price--old">R$ 100,00</p>
+
+                    <p class="store__products_card_price--new">R$ 79,00</p>
+                  </div>
+
+                  <div class="store__products_card_price_discount">
+                    <p class="store__products_card_price_discount--value">
+                      10% off
+                    </p>
+                  </div>
+                </div>
+                <p class="store__products_card_installments">
+                  Ou em até <strong>10x de R$ 7,90</strong>
+                </p>
+                <button class="store__products_card_button">comprar</button>
+              </div>
+
+              <div class="store__products_card">
+                <div class="store__products_card_new">
+                  <span class="store__products_card_new--text">novo</span>
+                </div>
+                <img
+                  src="assets/images/product.png"
+                  alt="product"
+                  class="store__products_card_img"
+                />
+                <h3 class="store__products_card_title">
+                  Lorem ipsum dolor sit amet consectetuer adipiscing elit
+                </h3>
+                <div class="store__products_card_price">
+                  <div>
+                    <p class="store__products_card_price--old">R$ 100,00</p>
+
+                    <p class="store__products_card_price--new">R$ 79,00</p>
+                  </div>
+
+                  <div class="store__products_card_price_discount">
+                    <p class="store__products_card_price_discount--value">
+                      10% off
+                    </p>
+                  </div>
+                </div>
+                <p class="store__products_card_installments">
+                  Ou em até <strong>10x de R$ 7,90</strong>
+                </p>
+                <button class="store__products_card_button">comprar</button>
+              </div>
+
+              <div class="store__products_card">
+                <div class="store__products_card_new">
+                  <span class="store__products_card_new--text">novo</span>
+                </div>
+                <img
+                  src="assets/images/product.png"
+                  alt="product"
+                  class="store__products_card_img"
+                />
+                <h3 class="store__products_card_title">
+                  Lorem ipsum dolor sit amet consectetuer adipiscing elit
+                </h3>
+                <div class="store__products_card_price">
+                  <p class="store__products_card_price--old">
+                    R$ 100,00
+                    <span class="store__products_card_price--new"
+                      >R$ 79,00</span
+                    >
+                  </p>
+
+                  <div class="store__products_card_price_discount">
+                    <p class="store__products_card_price_discount--value">
+                      10% off
+                    </p>
+                  </div>
+                </div>
+                <p class="store__products_card_installments">
+                  Ou em até <strong>10x de R$ 7,90</strong>
+                </p>
+                <button class="store__products_card_button">comprar</button>
+              </div>
+
+              <div class="store__products_card">
+                <div class="store__products_card_new">
+                  <span class="store__products_card_new--text">novo</span>
+                </div>
+                <img
+                  src="assets/images/product.png"
+                  alt="product"
+                  class="store__products_card_img"
+                />
+                <h3 class="store__products_card_title">
+                  Lorem ipsum dolor sit amet consectetuer adipiscing elit
+                </h3>
+                <div class="store__products_card_price">
+                  <div>
+                    <p class="store__products_card_price--old">R$ 100,00</p>
+
+                    <p class="store__products_card_price--new">R$ 79,00</p>
+                  </div>
+
+                  <div class="store__products_card_price_discount">
+                    <p class="store__products_card_price_discount--value">
+                      10% off
+                    </p>
+                  </div>
+                </div>
+                <p class="store__products_card_installments">
+                  Ou em até <strong>10x de R$ 7,90</strong>
+                </p>
+                <button class="store__products_card_button">comprar</button>
+              </div>
+
+              <div class="store__products_card">
+                <div class="store__products_card_new">
+                  <span class="store__products_card_new--text">novo</span>
+                </div>
+                <img
+                  src="assets/images/product.png"
+                  alt="product"
+                  class="store__products_card_img"
+                />
+                <h3 class="store__products_card_title">
+                  Lorem ipsum dolor sit amet consectetuer adipiscing elit
+                </h3>
+                <div class="store__products_card_price">
+                  <div>
+                    <p class="store__products_card_price--old">R$ 100,00</p>
+
+                    <p class="store__products_card_price--new">R$ 79,00</p>
+                  </div>
+
+                  <div class="store__products_card_price_discount">
+                    <p class="store__products_card_price_discount--value">
+                      10% off
+                    </p>
+                  </div>
+                </div>
+                <p class="store__products_card_installments">
+                  Ou em até <strong>10x de R$ 7,90</strong>
+                </p>
+                <button class="store__products_card_button">comprar</button>
+              </div>
+
+              <div class="store__products_card">
+                <div class="store__products_card_new">
+                  <span class="store__products_card_new--text">novo</span>
+                </div>
+                <img
+                  src="assets/images/product.png"
+                  alt="product"
+                  class="store__products_card_img"
+                />
+                <h3 class="store__products_card_title">
+                  Lorem ipsum dolor sit amet consectetuer adipiscing elit
+                </h3>
+                <div class="store__products_card_price">
+                  <div>
+                    <p class="store__products_card_price--old">R$ 100,00</p>
+
+                    <p class="store__products_card_price--new">R$ 79,00</p>
+                  </div>
+
+                  <div class="store__products_card_price_discount">
+                    <p class="store__products_card_price_discount--value">
+                      10% off
+                    </p>
+                  </div>
+                </div>
+                <p class="store__products_card_installments">
+                  Ou em até <strong>10x de R$ 7,90</strong>
+                </p>
+                <button class="store__products_card_button">comprar</button>
+              </div>
+
+              <div class="store__products_card">
+                <div class="store__products_card_new">
+                  <span class="store__products_card_new--text">novo</span>
+                </div>
+                <img
+                  src="assets/images/product.png"
+                  alt="product"
+                  class="store__products_card_img"
+                />
+                <h3 class="store__products_card_title">
+                  Lorem ipsum dolor sit amet consectetuer adipiscing elit
+                </h3>
+                <div class="store__products_card_price">
+                  <div>
+                    <p class="store__products_card_price--old">R$ 100,00</p>
+
+                    <p class="store__products_card_price--new">R$ 79,00</p>
+                  </div>
+
+                  <div class="store__products_card_price_discount">
+                    <p class="store__products_card_price_discount--value">
+                      10% off
+                    </p>
+                  </div>
+                </div>
+                <p class="store__products_card_installments">
+                  Ou em até <strong>10x de R$ 7,90</strong>
+                </p>
+                <button class="store__products_card_button">comprar</button>
+              </div>
+            </div>
+
+            <div class="store__items_pagination">
+              <button class="store__items_pagination-button--left" id="btnLeft">
+                <i
+                  class="store__items_pagination-button-icon fa-solid fa-chevron-left"
+                  aria-label="Página anterior"
+                ></i>
+              </button>
+              <button
+                class="store__items_pagination-button--right"
+                id="btnRight"
+              >
+                <i
+                  class="store__items_pagination-button-icon fa-solid fa-chevron-right"
+                  aria-label="Próxima página"
+                ></i>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="about">
+          <div class="content">
+            <div class="about__content">
+              <div class="about__content_image">
+                <img
+                  src="assets/images/banner-avanti.png"
+                  alt="imagem de uma xicara"
+                  class="about__content_image-photo"
+                />
+              </div>
+            </div>
+            <div class="about__content">
+              <div class="about__content_description">
+                <h1 class="about__content_description-title">Lorem Ipsum</h1>
+                <p class="about__content_description-text">
+                  Aenean massa. Cum sociis natoque penatibus et magnis dis
+                  parturient montes, nascetur ridiculus mus. Donec quam felis,
+                  ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+                  consequat massa quis enim.
+                </p>
+                <p class="about__content_description-text">
+                  Cras dignissim est et pellentesque tincidunt. Praesent
+                  bibendum quis velit a aliquam. Ut vestibulum turpis eget mi
+                  iaculis ullamcorper. Curabitur nec metus sed tortor
+                  sollicitudin porta nec eu enim. Ut fermentum scelerisque
+                  tortor mollis volutpat. Mauris iaculis magna nisl, vel
+                  porttitor augue placerat et.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="about-product">
+          <div class="content">
+            <div class="about-product__content">
+              <div class="about-product__image">
+                <img
+                  src="assets/images/banner-product-avanti.png"
+                  alt="imagem de uma xicara sobre uma tábua"
+                  class="about-product__image_photo"
+                />
+              </div>
+            </div>
+
+            <div class="about-product__content">
+              <div class="about-product__description">
+                <h1 class="about-product__description_title">Lorem Ipsum</h1>
+
+                <div class="about-product__description_text">
+                  <div class="about-product__description_text_icon">
+                    <i
+                      class="about-product__description_text_icon-location fa-solid fa-location-dot"
+                    ></i>
+                  </div>
+                  <p class="about-product__description_text_paragraph">
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. Donec quam felis,
+                    ultricies nec, pellentesque eu, pretium quis, sem.
+                  </p>
+                </div>
+                <div class="about-product__description_text">
+                  <div class="about-product__description_text_icon">
+                    <i
+                      class="about-product__description_text_icon-location fa-solid fa-location-dot"
+                    ></i>
+                  </div>
+                  <p class="about-product__description_text_paragraph">
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. Donec quam felis,
+                    ultricies nec, pellentesque eu, pretium quis, sem.
+                  </p>
+                </div>
+                <div class="about-product__description_text">
+                  <div class="about-product__description_text_icon">
+                    <i
+                      class="about-product__description_text_icon-location fa-solid fa-location-dot"
+                    ></i>
+                  </div>
+                  <p class="about-product__description_text_paragraph">
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. Donec quam felis,
+                    ultricies nec, pellentesque eu, pretium quis, sem.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="about">
+          <div class="content">
+            <div class="about__content">
+              <div class="about__content_image">
+                <img
+                  src="assets/images/banner-avanti.png"
+                  alt="imagem de uma xicara"
+                  class="about__content_image-photo"
+                />
+              </div>
+            </div>
+            <div class="about__content">
+              <div class="about__content_description">
+                <h1 class="about__content_description-title">Lorem Ipsum</h1>
+                <p class="about__content_description-text">
+                  Aenean massa. Cum sociis natoque penatibus et magnis dis
+                  parturient montes, nascetur ridiculus mus. Donec quam felis,
+                  ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+                  consequat massa quis enim.
+                </p>
+                <p class="about__content_description-text">
+                  Cras dignissim est et pellentesque tincidunt. Praesent
+                  bibendum quis velit a aliquam. Ut vestibulum turpis eget mi
+                  iaculis ullamcorper. Curabitur nec metus sed tortor
+                  sollicitudin porta nec eu enim. Ut fermentum scelerisque
+                  tortor mollis volutpat. Mauris iaculis magna nisl, vel
+                  porttitor augue placerat et.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact">
+          <div class="contact__description">
+            <div class="content">
+              <p class="contact__description_text">
+                Entre em contato conosco e verifique a disponibilidade para sua
+                região!
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="newsletter">
+          <div class="content">
+            <h3 class="newsletter__title">
+              Cadastre-se na nossa
+              <span class="newsletter__title--highlight">newsletter</span>
+            </h3>
+            <form class="newsletter__form" id="newsletterForm">
+              <input
+                type="text"
+                id="name"
+                placeholder=" Digite seu nome"
+                class="newsletter__form_input"
+              />
+              <input
+                type="email"
+                id="email"
+                placeholder=" Digite seu e-mail"
+                class="newsletter__form_input"
+              />
+              <label class="newsletter__form_checkbox">
+                <input type="checkbox" id="privacy" />
+                Estou de acordo com a
+                <a href="#" class="newsletter__form_checkbox--link"
+                  >politica de privacidade</a
+                >
+              </label>
+              <button type="submit" class="newsletter__form_button">
+                Cadastrar
+              </button>
+
+              <p class="newsletter__form_message" id="formMessage"></p>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="site-map">
+          <div class="content content--site-map">
+            <div class="site-map__social-media">
+              <img
+                src="assets/images/logo-avanti.png"
+                alt="logo avanti"
+                class="site-map__social-media_logo"
+              />
+              <ul class="site-map__social-media_list">
+                <li class="site-map__social-media_list-item">
+                  <a href="#" class="site-map__social-media_list-item--link">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+                <li class="site-map__social-media_list-item">
+                  <a href="#" class="site-map__social-media_list-item--link">
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="site-map__social-media_list-item">
+                  <a href="#" class="site-map__social-media_list-item--link">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </li>
+                <li class="site-map__social-media_list-item">
+                  <a href="#" class="site-map__social-media_list-item--link">
+                    <i class="fa-brands fa-tiktok"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="site-map__accordion">
+              <div class="site-map__accordion_item">
+                <h5 class="site-map__accordion_item-title">
+                  <span>Institucional</span>
+                  <i
+                    class="site-map__accordion_item-title--icon fas fa-chevron-down"
+                  ></i>
+                </h5>
+                <div class="site-map__accordion_item-content">
+                  <a href="#" class="site-map__accordion_item-content--link"
+                    >Sobre Nós</a
+                  >
+                  <a href="#" class="site-map__accordion_item-content--link"
+                    >Nossas Lojas</a
+                  >
+                  <a href="#" class="site-map__accordion_item-content--link"
+                    >Privacidade e Segurança</a
+                  >
+                  <a href="#" class="site-map__accordion_item-content--link"
+                    >Termos e Condições</a
+                  >
+                </div>
+              </div>
+
+              <div class="site-map__accordion_item">
+                <h5 class="site-map__accordion_item-title">
+                  <span>Central de Ajuda</span>
+                  <i
+                    class="site-map__accordion_item-title--icon fas fa-chevron-down"
+                  ></i>
+                </h5>
+                <div class="site-map__accordion_item-content">
+                  <a href="#" class="site-map__accordion_item-content--link"
+                    >Fale Conosco</a
+                  >
+                  <a href="#" class="site-map__accordion_item-content--link"
+                    >Frete e Entrega</a
+                  >
+                  <a href="#" class="site-map__accordion_item-content--link"
+                    >Trocas e Devoluções</a
+                  >
+                  <a href="#" class="site-map__accordion_item-content--link"
+                    >Formas de pagamento</a
+                  >
+                  <a href="#" class="site-map__accordion_item-content--link"
+                    >FAQ</a
+                  >
+                </div>
+              </div>
+
+              <div class="site-map__accordion_item">
+                <h5 class="site-map__accordion_item-title">
+                  <span>Atendimento</span>
+                  <i
+                    class="site-map__accordion_item-title--icon fas fa-chevron-down"
+                  ></i>
+                </h5>
+                <div class="site-map__accordion_item-content">
+                  <a
+                    href="(00) 1234-5678"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="site-map__accordion_item-content--link"
+                    >Telefone: (00) 1234-5678</a
+                  >
+                  <a
+                    href="mailto:exemplo@exemplo.com.br"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="site-map__accordion_item-content--link"
+                    >E-mail: exemplo@exemplo.com.br</a
+                  >
+                  <a href="#" class="site-map__accordion_item-content--link"
+                    >Ouvidoria</a
+                  >
+                  <a href="#" class="site-map__accordion_item-content--link">
+                    Chat Online
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--  -->
+          <div class="site-map__payment-methods">
+            <div class="content">
+              <ul class="site-map__payment-methods_image">
+                <li>
+                  <img
+                    src="assets/icons/icon-amex.png"
+                    alt="Logo cartão de crédito amex"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="assets/icons/icon-mastecard.png"
+                    alt="Logo cartão de crédito mastecard"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="assets/icons/icon-visa.png"
+                    alt="Logo cartão de crédito visa"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="assets/icons/icon-hipercard.png"
+                    alt="Logo cartão de crédito hipercard"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="assets/icons/icon-elo.png"
+                    alt="Logo cartão de crédito elo"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="assets/icons/icon-diners.png"
+                    alt="Logo cartão de crédito diners club"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="assets/icons/icon-paypal.png"
+                    alt="Logo cartão de crédito paypal"
+                  />
+                </li>
+                <li>
+                  <img src="assets/icons/icon-pix.png" alt="Logo pix" />
+                </li>
+                <li>
+                  <img
+                    src="assets/icons/icon-boleto.png"
+                    alt="icone codigo de barras"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="partner">
+          <div class="content">
+            <div class="partner__text">
+              <p class="partner__text_paragraph">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                nostrud exerci.
+              </p>
+              <div class="partner__text_logos">
+                <img
+                  src="assets/images/logo-lets-encrypt.png"
+                  alt="Logo lets-encrypt "
+                />
+                <img
+                  src="assets/images/logo-vtex-pci.png"
+                  alt="Logo vtex-pci "
+                />
+                <img
+                  src="assets/images/logo-avanti-footer.png"
+                  alt="Logo avanti"
+                />
+                <img src="assets/images/logo-vertex.png" alt="Logo vertex" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/menu.js" defer></script>
+    <script src="js/search.js" defer></script>
+    <script src="js/slider.js" defer></script>
+    <script src="js/accordion.js" defer></script>
+    <script src="js/form.js" defer></script>
+  </body>
+</html>
