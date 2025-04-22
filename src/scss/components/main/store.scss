@@ -1,0 +1,95 @@
+@use "../../base/vars" as *;
+
+.store {
+  margin-top: 42px;
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+
+    &_title {
+      color: $text-default-color;
+      font-weight: 700;
+      font-size: 16px;
+
+      @media (min-width: 1024px) {
+        font-size: 24px;
+      }
+    }
+
+    &_link {
+      color: $text-secondary-color;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    &_pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+
+      @media (min-width: 1024px) {
+        width: 100%;
+        padding: 0 10px 0 10px;
+        justify-content: space-between;
+        position: relative;
+      }
+
+      &-button {
+        background-color: $bg-default-color;
+
+        cursor: pointer;
+
+        &--left {
+          width: 30px;
+          height: 30px;
+          border-radius: 100%;
+          border: 1px solid $primary-color;
+
+          @media (min-width: 1024px) {
+            position: absolute;
+            top: -279px;
+            left: -16px;
+
+            z-index: 10;
+          }
+        }
+
+        &--right {
+          width: 30px;
+          height: 30px;
+          border-radius: 100%;
+          border: 1px solid $primary-color;
+
+          @media (min-width: 1024px) {
+            position: absolute;
+            top: -279px;
+            right: 0px;
+
+            z-index: 10;
+          }
+        }
+
+        &-icon {
+          color: $primary-color;
+          margin: auto;
+        }
+      }
+    }
+  }
+
+  &__products {
+    display: flex;
+
+    margin-top: 30px;
+
+    overflow: hidden;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

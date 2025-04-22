@@ -6,3 +6,11 @@
 @use "components/header/banner" as *;
 @use "components/header/menu" as *;
 @use "components/header/menu-desktop" as *;
+
+
+@use "components/main/store" as *;
+@use "components/main/card" as *;
+@use "components/main/about" as *;
+@use "components/main/about-product" as *;
+@use "components/main/contact" as *;
+@use "components/main/newsletter" as *;

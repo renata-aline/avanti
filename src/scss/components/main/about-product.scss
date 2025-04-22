@@ -1,0 +1,114 @@
+@use "../../base/vars" as *;
+
+.about-product {
+  background-color: $bg-default-light-color;
+  margin-top: 42px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  .content {
+    @media (min-width: 1024px) {
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+  }
+
+  &__content {
+    @media (min-width: 1024px) {
+      box-sizing: border-box;
+      flex: 0 0 auto;
+      width: 50%;
+    }
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+
+    &_photo {
+      @media screen and (min-width: 1024px) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__description {
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      padding-right: 32px;
+    }
+
+    &_title {
+      color: $text-default-color;
+      font-weight: 700;
+      font-size: 20px;
+      text-transform: uppercase;
+      margin-top: 20px;
+      text-align: center;
+
+      @media (min-width: 1024px) {
+        font-size: 30px;
+      }
+
+      @media (min-width: 1440px) {
+        font-size: 40px;
+      }
+    }
+
+    &_text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin-top: 20px;
+
+      @media (min-width: 1024px) {
+      }
+
+      &_icon {
+        width: 60px;
+        height: 60px;
+        background-color: $primary-color;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (min-width: 1024px) {
+          width: 80px;
+          height: 80px;
+        }
+
+        &-location {
+          font-size: 30px;
+          color: $text-light-color;
+        }
+      }
+
+      &_paragraph {
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 400;
+        color: $text-default-color;
+        flex: 1;
+
+        @media (min-width: 1024px) {
+          font-size: 18px;
+          line-height: 30px;
+        }
+
+        @media (min-width: 1440px) {
+          font-size: 24px;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+}

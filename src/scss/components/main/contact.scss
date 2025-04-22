@@ -1,0 +1,34 @@
+@use "../../base/vars" as *;
+
+.contact {
+  margin-top: 42px;
+  background: url("../assets/images/banner-section-contact.png") no-repeat center;
+  background-size: cover;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__description {
+    width: 100%;
+    color: $text-light-color;
+    background-color: $primary-color;
+
+    &_text {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 140%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (min-width: 1024px) {
+        font-size: 30px;
+        line-height: 140%;
+
+        height: 100px;
+      }
+    }
+  }
+}

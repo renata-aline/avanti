@@ -1,0 +1,101 @@
+@use "../../base/vars" as *;
+
+.newsletter {
+  margin-top: 42px;
+
+  &__title {
+    color: $text-default-color;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+
+    &--highlight {
+      color: $primary-color;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 20px;
+    padding: 30px 16px;
+    border-radius: 8px;
+    background-color: $bg-light-grey-color;
+
+    @media (min-width: 1024px) {
+      position: relative;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &_input {
+      box-sizing: border-box;
+      width: 100%;
+      height: 48px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      padding: 10px;
+      color: $text-secondary-color;
+      background-color: $bg-default-color;
+      font-size: 14px;
+
+      @media (min-width: 1024px) {
+        width: 250px;
+      }
+    }
+
+    &_checkbox {
+      font-size: 12px;
+      font-weight: 400;
+      color: $text-secondary-color;
+
+      &--link {
+        cursor: pointer;
+        color: $text-secondary-color;
+        text-decoration: underline;
+      }
+    }
+
+    &_button {
+      width: 100%;
+      height: 48px;
+      border-radius: 8px;
+      border: none;
+      background-color: $primary-color;
+      color: $text-light-color;
+      font-weight: 700;
+      font-size: 14px;
+
+      @media (min-width: 1024px) {
+        width: 121px;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+#formMessage {
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: 700;
+
+  &.error {
+    color: $text-warning-color;
+  }
+
+  &.success {
+    color: $primary-color;
+  }
+
+  @media (min-width: 1024px) {
+    position: absolute;
+    top: 80px;
+    left: 30%;
+  }
+}
