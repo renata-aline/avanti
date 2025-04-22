@@ -14,3 +14,8 @@
 @use "components/main/about-product" as *;
 @use "components/main/contact" as *;
 @use "components/main/newsletter" as *;
+
+@use "components/footer/site-map" as *;
+@use "components/footer/accordion" as *;
+@use "components/footer/payment-method" as *;
+@use "components/footer/partner" as *;

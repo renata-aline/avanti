@@ -1,0 +1,23 @@
+@use "../../base/vars" as *;
+
+.site-map__payment-methods {
+  padding: 30px;
+  margin-top: 20px;
+
+  @media (min-width: 1024px) {
+    margin-top: 20px;
+  }
+
+  &_image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    list-style: none;
+
+    @media (min-width: 1024px) {
+      margin: auto;
+    }
+  }
+}
