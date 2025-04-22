@@ -2,7 +2,7 @@
 node_modules/
 
 # Ignora arquivos compilados do Sass (se quiser subir só o SCSS)
-css/
+scss/
 
 # Ignora arquivos do sistema
 .DS_Store
