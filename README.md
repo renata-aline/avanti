@@ -1,15 +1,17 @@
 # avanti
-Este projeto é o resultado do desafio front-end, onde o objetivo foi reproduzir fielmente um layout do Figma utilizando **HTML**, **CSS/SCSS** e **JavaScript**, com foco em responsividade, boas práticas e interatividade.
----
+Este projeto é o resultado de um desafio front-end, cujo objetivo foi reproduzir fielmente um layout do Figma utilizando as tecnologias HTML, SCSS (Sass) e JavaScript Vanilla. O foco principal foi garantir uma experiência totalmente responsiva, seguindo boas práticas de código e adicionando interatividade.
 
-🔗 [Acesse o layout no Figma aqui](https://www.figma.com/proto/DqtFxC6312M32mLt8FpJjq/innovation-class?page-id=13%3A673&node-id=13-920&viewport=346%2C140%2C0.11&t=HyGGDSs83f1vbqMJ-1&scaling=scale-down&content-scaling=fixed)
+✅ Projeto publicado:
+🔗 https://renata-aline.github.io/avanti/
 
----
+🎨 Layout no Figma:
+🔗 https://www.figma.com/proto/DqtFxC6312M32mLt8FpJjq/innovation-class?page-id=13%3A673&node-id=13-920
+
 ##  Tecnologias Utilizadas
 
-- HTML5
+- HTML5 semântico
 - CSS3
-- SCSS (Sass)
+- SCSS (Sass) com estrutura modular
 - JavaScript Vanilla
 - [Font Awesome](https://fontawesome.com/) (para ícones)
 
@@ -28,3 +30,16 @@ Este projeto é o resultado do desafio front-end, onde o objetivo foi reproduzir
 - Validação de formulário de newsletter (campos obrigatórios e formatos)
 
 ---
+#  Clone o repositório
+git clone https://github.com/renata-aline/avanti.git
+cd avanti
+
+# Instale o Sass como dependência de desenvolvimento
+npm install
+
+#  Compile os arquivos SCSS para CSS
+npx sass src/scss/main.scss src/css/main.css --watch
+
+#  Abra o index.html no navegador
+
+
