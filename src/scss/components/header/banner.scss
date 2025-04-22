@@ -1,53 +1,106 @@
+@use "../../base/reset" as *;
+
 @use "../../base/vars" as *;
-@use "../../base/mixins" as *;
 
-.menu__nav {
-  background-color: $bg-default-color;
-  position: absolute;
-  box-sizing: border-box;
-  top: 90px;
-  left: 0;
+.banner-voucher {
   width: 100%;
-  padding: 16px;
-  z-index: 10;
+  background-color: $primary-color;
+  text-align: center;
 
-  @media (min-width: 1024px) {
-    position: static;
-    background-color: transparent;
-    width: auto;
-    padding: 0;
+  &__text {
+    font-size: 14px;
+    line-height: 22px;
+    color: $bg-default-color;
+    font-weight: 600;
+    &_value {
+      font-weight: 800;
+      font-size: 16px;
+      width: 63px;
+      background-color: $bg-voucher-color;
+    }
+  }
+}
+
+.banner-marketing {
+  overflow: hidden;
+  background-color:$bg-dark-grey-color ;
+  margin-top: 20px;
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
   }
 
-  &_list {
-    list-style: none;
-    padding: 0;
+  &__image {
+    margin-left: -280px;
 
-    @media (min-width: 1024px) {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 20px;
-    }
+    &_photo {
+      width: 100%;
+      display: block;
+      object-fit: contain;
 
-    &-item {
-      margin-bottom: 16px;
-
-      &-link {
-        text-decoration: none;
-        color: $text-secondary-color;
-        font-weight: 700;
-
-        &:hover {
-          @include hover-underline($color: $primary-color);
-        }
+      @media (min-width: 1024px) {
+        width: auto;
       }
     }
   }
-  &.hidden {
-    display: none;
 
-    @media (min-width: 1024px) {
-      display: block;
+  &__description {
+    width: initial;
+    text-align: center;
+
+    &_title {
+      font-size: 40px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $text-default-color;
+
+      @media (min-width: 1024px) {
+        font-size: 100px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+      }
+
+      &--light {
+        display: block;
+        font-size: 40px;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $text-default-color;
+
+        @media (min-width: 1024px) {
+          font-size: 100px;
+        }
+      }
+    }
+
+    &_text {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $primary-color;
+      margin: 8px 0;
+
+      @media (min-width: 768px) {
+        font-size: 25px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      &--bold {
+        margin-top: 10px;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: $primary-color;
+
+        @media (min-width: 1024px) {
+          font-size: 60px;
+        }
+      }
     }
   }
 }
