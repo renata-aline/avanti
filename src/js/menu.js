@@ -10,15 +10,264 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // LOGIC FOR DESKTOP MENU
-let menus = [];
-fetch("/src/js/menu.json")
-  .then((response) => response.json())
-  .then((data) => {
-    menus = data.categories;
-  })
-  .catch((error) => {
-    console.error("Error fetching menu.json:", error);
-  });
+let menus = [
+  {
+    name: "todasCategorias",
+    category: "",
+    links: [
+      {
+        links: [
+          {
+            name: "Cozinha",
+            url: "#cozinha",
+          },
+          {
+            name: "Sala",
+            url: "#sala",
+          },
+          {
+            name: "Banheiro",
+            url: "#banheiro",
+          },
+          {
+            name: "Jardim",
+            url: "#jardim",
+          },
+          {
+            name: "Escritório",
+            url: "#escritorio",
+          },
+          {
+            name: "Decoração",
+            url: "#decoracao",
+          },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: "cozinha",
+    category: "Cozinha",
+    links: [
+      {
+        links: [
+          {
+            name: "Categoria",
+            url: "#cozinha",
+          },
+          {
+            name: "cozinha1",
+            url: "#teste2",
+          },
+          {
+            name: "cozinha1",
+            url: "#teste2",
+          },
+          {
+            name: "cozinha1",
+            url: "#teste2",
+          },
+          {
+            name: "cozinha1",
+            url: "#teste2",
+          },
+        ],
+      },
+      {
+        links: [
+          {
+            name: "categoria",
+            url: "#teste1",
+          },
+          {
+            name: "cozinha2",
+            url: "#teste2",
+          },
+          {
+            name: "cozinha2",
+            url: "#teste1",
+          },
+          {
+            name: "cozinha2",
+            url: "#teste2",
+          },
+        ],
+      },
+      {
+        links: [
+          {
+            name: "Categoria",
+            url: "#teste1",
+          },
+          {
+            name: "cozinha3",
+            url: "#teste2",
+          },
+          {
+            name: "cozinha3",
+            url: "#teste2",
+          },
+          {
+            name: "cozinha3",
+            url: "#teste2",
+          },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: "sala",
+    category: "Sala",
+    links: [
+      {
+        links: [
+          {
+            name: "Categoria",
+            url: "#sala",
+          },
+          {
+            name: "sala1",
+            url: "#teste2",
+          },
+          {
+            name: "sala1",
+            url: "#teste2",
+          },
+          {
+            name: "sala1",
+            url: "#teste2",
+          },
+          {
+            name: "sala1",
+            url: "#teste2",
+          },
+        ],
+      },
+      {
+        links: [
+          {
+            name: "Categoria",
+            url: "#sala",
+          },
+          {
+            name: "sala2",
+            url: "#teste2",
+          },
+          {
+            name: "sala2",
+            url: "#teste2",
+          },
+          {
+            name: "sala2",
+            url: "#teste2",
+          },
+          {
+            name: "sala2",
+            url: "#teste2",
+          },
+        ],
+      },
+      {
+        links: [
+          {
+            name: "Categoria",
+            url: "#sala",
+          },
+          {
+            name: "sala3",
+            url: "#teste2",
+          },
+          {
+            name: "sala3",
+            url: "#teste2",
+          },
+          {
+            name: "sala3",
+            url: "#teste2",
+          },
+          {
+            name: "sala3",
+            url: "#teste2",
+          },
+        ],
+      },
+    ],
+  },
+
+  {
+    name: "banheiro",
+    category: "Banheiro",
+    links: [
+      {
+        links: [
+          {
+            name: "Categoria",
+            url: "#",
+          },
+          {
+            name: "Banheiro1",
+            url: "#",
+          },
+          {
+            name: "Banheiro1",
+            url: "#",
+          },
+          {
+            name: "Banheiro1",
+            url: "#",
+          },
+          {
+            name: "Banheiro1",
+            url: "#",
+          },
+        ],
+      },
+      {
+        links: [
+          {
+            name: "Categoria",
+            url: "#teste1",
+          },
+          {
+            name: "Banheiro2",
+            url: "#teste2",
+          },
+          {
+            name: "Banheiro2",
+            url: "#teste1",
+          },
+          {
+            name: "Banheiro2",
+            url: "#teste2",
+          },
+        ],
+      },
+      {
+        links: [
+          {
+            name: "Categoria",
+            url: "#teste1",
+          },
+          {
+            name: "Banheiro3",
+            url: "#teste2",
+          },
+          {
+            name: "Banheiro3",
+            url: "#teste1",
+          },
+          {
+            name: "Banheiro3",
+            url: "#teste2",
+          },
+        ],
+      },
+    ],
+  },
+];
+
 const menuDesktop = document.getElementById("menuDesktop");
 const menuList = document.getElementById("menulists");
 
